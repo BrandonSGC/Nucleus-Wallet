@@ -43,7 +43,8 @@ img {
 
 /* Utilidades */
 
-.contenedor {
+/* Todo lo que termine con __contenedor*/
+[class$="__contenedor"] {
     max-width: 120rem;
     margin: 0 auto;
     width: 90%;
@@ -175,3 +176,58 @@ img {
 }
 
 
+/* Que es */
+.nucleus {
+    margin-top: 3rem;
+}
+
+.nucleus__heading {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.nucleus__grid {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+@media (min-width: 768px) {
+    .nucleus__grid {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 5rem;
+        align-items: center;
+    }
+}
+
+.liastado {
+
+}
+
+.listado__elemento {
+    /* 
+    Primer valor horizontal,
+    Segundo valor vertical
+    Tercer valor blur
+    Cuarto valor el spread
+    Quinto valor el color */
+    box-shadow: 0px 0px 15px 3px  rgb(0 0 0 / .30);
+    margin-bottom: 5rem;
+    padding: 2rem;
+    transition-property: transform;
+    transition-duration: 300ms;
+}
+
+.listado__heading {
+    color: var(--primario);
+    font-size: 3rem;
+    margin: 0;
+}
+
+.listado__texto {
+    margin: 0;
+}
+
+.listado__elemento:hover {
+    transform: scale(1.1);
+}
