@@ -40,6 +40,9 @@ img {
     max-width: 100%;
     display: block;
 }
+.mask {
+    overflow: hidden;
+}
 
 /* Utilidades */
 
@@ -50,6 +53,10 @@ img {
     width: 90%;
 }
 
+[class$="__heading"] {
+    text-align: center;
+    margin-bottom: 5rem;
+}
 
 /* Header */
 
@@ -112,7 +119,6 @@ img {
 }
 
 .header__heading {
-    text-align: center;
     font-size: 3rem;
 }
 
@@ -175,15 +181,10 @@ img {
     }
 }
 
-
 /* Que es */
+
 .nucleus {
     margin-top: 3rem;
-}
-
-.nucleus__heading {
-    text-align: center;
-    margin-bottom: 5rem;
 }
 
 .nucleus__grid {
@@ -200,10 +201,6 @@ img {
     }
 }
 
-.liastado {
-
-}
-
 .listado__elemento {
     /* 
     Primer valor horizontal,
@@ -211,6 +208,7 @@ img {
     Tercer valor blur
     Cuarto valor el spread
     Quinto valor el color */
+    background-color: var(--blanco);
     box-shadow: 0px 0px 15px 3px  rgb(0 0 0 / .30);
     margin-bottom: 5rem;
     padding: 2rem;
@@ -231,3 +229,32 @@ img {
 .listado__elemento:hover {
     transform: scale(1.1);
 }
+
+
+/* Seccion Seguridad */
+
+.seguridad {
+    position: relative;
+    padding: 10rem 0;
+    background-color: var(--primario);
+    
+    /* Para hacer el diseno del background*/
+    clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
+
+.seguridad__heading {
+    color: var(--blanco);
+}
+
+@media (min-width: 768px) {
+    .seguridad__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 5rem;
+        align-items: center;
+    }
+}
+
+
+/* Seccion Comisiones */
