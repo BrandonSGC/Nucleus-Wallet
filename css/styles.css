@@ -328,6 +328,10 @@ img {
     padding-top: 2rem;
 }
 
+.testimoniales__grid:last-child {
+    padding-bottom: 1rem;
+}
+
 @media (min-width: 560px) {
     .testimoniales__grid {
         display: grid;
